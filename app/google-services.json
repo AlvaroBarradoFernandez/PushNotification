@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "918797270061",
+    "firebase_url": "https://pushnotificationandroidkotlin.firebaseio.com",
+    "project_id": "pushnotificationandroidkotlin",
+    "storage_bucket": "pushnotificationandroidkotlin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918797270061:android:1c7c00fc809681aa",
+        "android_client_info": {
+          "package_name": "com.utad.pushnotification"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "918797270061-54befm854or5np319sei1r3sjb5sq6mv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACLPTtF1bWtTGnI-8Hw60Mb3Y6j8JrvrU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
