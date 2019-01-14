@@ -9,7 +9,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+    //Aqui le decimos la version de android
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationUtils(this)
         }

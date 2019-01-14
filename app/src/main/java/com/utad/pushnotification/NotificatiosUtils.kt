@@ -19,10 +19,10 @@ class NotificationUtils(base: Context): ContextWrapper(base) {
 
     private val mNotificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
+
     init {
         createChannels()
     }
-
 
     fun deleteNotificationChannel() {
         mNotificationManager.deleteNotificationChannel(CHANNEL_ID)

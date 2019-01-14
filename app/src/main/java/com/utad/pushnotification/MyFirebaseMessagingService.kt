@@ -17,12 +17,13 @@ import android.support.v4.app.NotificationCompat
 class MyFirebaseMessagingService : FirebaseMessagingService() {
     val TAG = "Push Notification"
 
-
+    //Aqui se pone el mensaje
     @SuppressLint("LongLogTag")
     override fun onNewToken(token: String?) {
         Log.d(TAG, "Message: ${token}")
     }
 
+    //De donde viene y donde se setea en el movil
     @SuppressLint("LongLogTag")
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
         Log.d(TAG, "Message: ${remoteMessage.from}")
@@ -33,6 +34,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         }
     }
 
+    //Muestra la notificacion
     private fun showNotification(remoteMessage: RemoteMessage){
 
         val mNotificationID = 101
@@ -40,7 +42,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         mNotificationManager.notify(mNotificationID, notificationIntent(remoteMessage))
     }
 
-
+    //Notificacion por defecto, sin estilos
     private fun defaultNotification(remoteMessage: RemoteMessage) = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
         Notification.Builder(this, NotificationUtils.CHANNEL_ID)
     }
@@ -52,6 +54,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         setSmallIcon(android.R.drawable.ic_dialog_info)
     }
 
+    //Donde se va a mostrar la notificacion
     private fun notificationIntent(remoteMessage: RemoteMessage) = PendingIntent.getActivity(this,
             0,
             Intent(this, MainActivity::class.java),
